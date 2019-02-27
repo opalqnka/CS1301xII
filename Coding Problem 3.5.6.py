@@ -31,10 +31,13 @@ def word_count(my_string):
         string_len = len(my_string)
         i = 0
         while string_len > 0:
-            if my_string[i] == " " and not my_string[i+1] == " ":
-                word_count += 1
-            i += 1
-            string_len -= 1
+            try:           
+                if my_string[i] == " " and not my_string[i+1] == " ":
+                    word_count += 1
+                i += 1
+                string_len -= 1
+            except IndexError:
+                pass
         return word_count
     except:
         return "Not a string"
