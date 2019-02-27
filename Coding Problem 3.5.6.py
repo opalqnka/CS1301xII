@@ -39,7 +39,7 @@ def word_count(my_string):
             except IndexError:
                 pass
         return word_count
-    except:
+    except TypeError:
         return "Not a string"
     
 
@@ -60,3 +60,4 @@ print("Word Count:", word_count("Hi   David"))
 print("Word Count:", word_count(5))
 print("Word Count:", word_count(5.1))
 print("Word Count:", word_count(True))
+    
